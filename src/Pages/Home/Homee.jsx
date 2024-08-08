@@ -87,22 +87,26 @@ const Homee = () => {
                                 </motion.button>
                             </div>
                         </animated.div>
-                        <animated.div
-                            style={parallaxImgEffect}
-                            className="content2 mt-[20rem] md:mt-2 flex justify-end px-5 md:px-0"
-                        >
-                            <div className="rounded-2xl md:rounded-r-none md:rounded-l-3xl bg-base-100 -mt-24 h-[200px] md:h-[400px] w-full md:w-96 px-3 py-0 md:px-0 md:py-5">
-                                <div className="h-[360px] -mt-44 md:mt-0 pl-0 md:pl-5 md:h-[360px]">
-                                    <animated.img
-                                        style={parallaxImgEffect}
-                                        src="/assets/one.jpg"
-                                        alt="profile"
-                                        className="rounded-2xl md:rounded-r-none md:rounded-l-lg h-full object-cover w-full"
-                                    />
-                                </div>
-                            </div>
-                        </animated.div>
                     </motion.div>
+                    <animated.div
+                        style={parallaxImgEffect}
+                        className="content2 mt-[20rem] md:mt-2 flex justify-end px-5 md:px-0"
+                    >
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.9, delay: 0.5 }}
+                            className="rounded-2xl md:rounded-r-none md:rounded-l-3xl bg-base-100 -mt-24 h-[200px] md:h-[400px] w-full md:w-96 px-3 py-0 md:px-0 md:py-5">
+                            <div className="h-[360px] -mt-44 md:mt-0 pl-0 md:pl-5 md:h-[360px]">
+                                <animated.img
+                                    style={parallaxImgEffect}
+                                    src="/assets/one.jpg"
+                                    alt="profile"
+                                    className="rounded-2xl md:rounded-r-none md:rounded-l-lg h-full object-cover w-full"
+                                />
+                            </div>
+                        </motion.div>
+                    </animated.div>
                 </animated.div>
 
                 <animated.div
