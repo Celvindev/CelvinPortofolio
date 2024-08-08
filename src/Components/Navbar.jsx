@@ -19,7 +19,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm font-poppins dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><a>Item 1</a></li>
                         <li>
                             <a>Parent</a>
@@ -32,14 +32,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className=" md:block hidden">
-                    <a className="btn btn-ghost text-xl text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
+                    <a className="btn btn-ghost text-xl font-poppins text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
                 </div>
             </div>
             <div className="navbar-center lg:hidden">
-                <a className="btn btn-ghost text-xl text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
+                <a className="btn btn-ghost text-xl font-poppins text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu text-white menu-horizontal px-1">
+                <ul className="menu text-white menu-horizontal font-poppins px-1">
                     <li><a>Home</a></li>
                     <li><a>Project</a></li>
                     <li><a>Contact</a></li>
