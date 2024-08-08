@@ -37,7 +37,7 @@ const Caraousel = () => {
     }, []);
 
     const parallaxEffect = useSpring({
-        transform: `translateY(${scrollY * -0.2}px)`,
+        transform: `translateY(${scrollY * -0.6}px)`,
         config: { mass: 1, tension: 280, friction: 80 }
     });
 
@@ -52,6 +52,35 @@ const Caraousel = () => {
                     style={parallaxEffect}
                     className="w-full md:w-[200px] bg-[#14151A] h-auto mt-8 p-5 rounded-3xl block md:hidden "
                 >
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-xl md:text-2xl text-white text-center px-5 md:px-0  font-poppins font-semibold"
+                    >
+                        My <span className="text-[#07C65D]">Projects</span>
+                    </motion.h1>
+
+                    <div className="tab mt-3 flex flex-col ">
+                        <button
+                            className={`tab text-[#07C65D] font-poppins font-semibold text-md ${activeTab === 0 ? 'tab-active' : ' text-white'}`}
+                            onClick={() => handleTabClick(0)}
+                        >
+                            Internship
+                        </button>
+                        <button
+                            className={`tab text-[#07C65D] font-poppins font-semibold text-md ${activeTab === 1 ? 'tab-active' : 'text-white'}`}
+                            onClick={() => handleTabClick(1)}
+                        >
+                            Freelance
+                        </button>
+                        <button
+                            className={`tab text-[#07C65D] font-poppins font-semibold text-md ${activeTab === 2 ? 'tab-active' : 'text-white'}`}
+                            onClick={() => handleTabClick(2)}
+                        >
+                            Personal
+                        </button>
+                    </div>
                 </animated.div>
 
                 <animated.div

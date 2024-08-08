@@ -18,7 +18,7 @@ const Homee = () => {
     }, []);
 
     const parallaxEffect = useSpring({
-        transform: `translateY(${scrollY * -0.2}px)`,
+        transform: `translateY(${scrollY * -0.5}px)`,
         config: { mass: 1, tension: 280, friction: 80 }
     });
 
