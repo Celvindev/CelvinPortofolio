@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root,
+[data-theme] {
+  background-color: white;
+  color: var(--fallback-bc, oklch(var(--bc) / 1));
+}
