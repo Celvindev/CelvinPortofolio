@@ -27,7 +27,7 @@ const Homee = () => {
 
     const parallaxImgEffect = useSpring({
         transform: `translateY(${scrollY * -0.1}px)`,
-        config: { mass: 2, tension: 280, friction: 100 }
+        config: { mass: 1, tension: 280, friction: 100 }
     });
 
     return (
@@ -41,7 +41,7 @@ const Homee = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.9 }}
                         className="flex flex-col md:flex-row mt-16 md:mt-24 text-white"
                     >
                         <animated.div
