@@ -1,8 +1,6 @@
-
-
 const Navbar = () => {
     return (
-        <div className="navbar">
+        <div className="navbar lg:px-5 sm:px-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -11,7 +9,7 @@ const Navbar = () => {
                             className="h-5 w-5"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke="currentColor">
+                            stroke="white">
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
@@ -33,6 +31,11 @@ const Navbar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
+                <div className=" md:block hidden">
+                    <a className="btn btn-ghost text-xl text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
+                </div>
+            </div>
+            <div className="navbar-center lg:hidden">
                 <a className="btn btn-ghost text-xl text-white">Celvin<span className="text-[#07C65D]">Portfolio</span></a>
             </div>
             <div className="navbar-end hidden lg:flex">
