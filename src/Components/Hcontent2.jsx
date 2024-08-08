@@ -20,7 +20,7 @@ const Hcontent2 = () => {
     });
 
     const parallaxTextEffect = useSpring({
-        transform: `translateY(${scrollY * -0.1}px)`,
+        transform: `translateY(${scrollY * 0.1}px)`,
         config: { mass: 1, tension: 280, friction: 100 }
     });
 
