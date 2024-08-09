@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useSpring, animated } from '@react-spring/web';
 import { useState, useEffect } from 'react';
+import content from './Content.json';
+
 
 const Hcontent2 = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -38,7 +40,7 @@ const Hcontent2 = () => {
             <div className="flex flex-col gap-0 md:gap-3 md:flex-row">
                 <animated.div
                     style={parallaxEffect}
-                    className="w-full md:w-[400px] bg-[#14151A] h-auto mt-20 md:mt-8 p-5 rounded-3xl"
+                    className="w-full md:w-[400px] bg-[#14151A] h-auto md:h-[400px] mt-20 md:mt-8 p-5 rounded-3xl"
                 >
                     <animated.div
                         style={parallaxImgEffect}
@@ -78,14 +80,43 @@ const Hcontent2 = () => {
                         transition={{ duration: 0.8, delay: 0.6 }}
                         className="text-sm mt-4 md:mt-8 font-poppins text-white font-light text-justify mx-auto md:mx-0 w-full  leading-normal"
                     >
-                        A student majoring in informatics engineering at Batam State Polytechnic with one year internship experience as a
-                        full-stack web developer at a course institution that makes him capable of front-end and back-end web  development.
-                        Expert in HTML, CSS, Tailwind CSS, DaisyUI, Javascript, ReactJS, ExpressJS, Dart, Flutter C#,  PHP, Mudblazor and Java,
-                        he also has strong analytical and leadership skills. A good fast learner under pressure, able to work with agility. With
-                        a strong understanding in software development concepts, software design  principles, and OOP programming, he defeats
-                        programming challenges. Passionate about web and mobile application development, he continues to invest his interest
-                        and improve his knowledge in the field of technology  and programming.
+                        {content.description}
                     </motion.p>
+
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-xl md:text-2xl  mt-3 text-white font-poppins font-semibold"
+                    >
+                        Work <span className="text-[#07C65D]">Experience</span>
+                    </motion.h1>
+                    <div className="text-sm mt-2 md:mt-4 font-poppins text-white font-light text-justify mx-auto md:mx-0 w-full  leading-normal">
+                        <div tabIndex={0} className="collapse collapse-arrow border-base-300 border">
+                            <div className="collapse-title text-xl font-medium">Infinite Learning Indonesia</div>
+                            <div className="collapse-content">
+                                {content.description3}
+                            </div>
+                        </div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
+                            <div className="collapse-title text-xl font-medium">PT. Epson Batam</div>
+                            <div className="collapse-content">
+                                {content.description3}
+                            </div>
+                        </div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
+                            <div className="collapse-title text-xl font-medium">PT. Techno Pilot Indonesia</div>
+                            <div className="collapse-content">
+                                {content.description3}
+                            </div>
+                        </div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
+                            <div className="collapse-title text-xl font-medium">PT. Ezb Wisata Indonesia</div>
+                            <div className="collapse-content">
+                                {content.description3}
+                            </div>
+                        </div>
+                    </div>
                 </animated.div>
             </div>
         </>

@@ -4,6 +4,7 @@ import { useSpring, animated } from '@react-spring/web';
 import { useState, useEffect } from 'react';
 import Caraousel from "../../Components/Caraousel";
 import Hcontent2 from "../../Components/Hcontent2";
+import content from '../../Components/Content.json';
 
 const Homee = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -67,11 +68,7 @@ const Homee = () => {
                                 transition={{ duration: 0.8, delay: 0.6 }}
                                 className="text-sm mt-4 md:mt-8 font-poppins font-light text-justify md:text-center mx-auto md:mx-0 w-full px-5 md:px-[16rem] leading-normal"
                             >
-                                Celvin Alfino Fernandes is a frontend developer and UI/UX
-                                designer passionate about creating intuitive and visually
-                                appealing user interfaces. He strives to deliver seamless and
-                                engaging user experiences, stays updated with industry trends,
-                                and continuously improves his skills to bring innovative solutions to projects.
+                                {content.description2}
                             </motion.p>
                             <div className="px-5 md:px-0">
                                 <motion.button
