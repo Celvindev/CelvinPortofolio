@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Caraousel from "../../Components/Caraousel";
 import Hcontent2 from "../../Components/Hcontent2";
 import content from '../../Components/Content.json';
+import Hskill from "../../Components/Hskill";
 
 const Homee = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -107,6 +108,8 @@ const Homee = () => {
                     <Hcontent2 />
                     {/* CONTENT 3 */}
                     <Caraousel />
+                    {/* CONTENT 4 */}
+                    <Hskill />
                 </div>
             )}
         </>
