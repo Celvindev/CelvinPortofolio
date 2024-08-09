@@ -43,7 +43,7 @@ const Homee = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className="text-black text-4xl font-extrabold font-poppins"
+                        className="text-black text-center text-2xl md:text-4xl font-extrabold font-poppins"
                     >
                         LOADING BANG, SABAR DULU...
                     </motion.div>
