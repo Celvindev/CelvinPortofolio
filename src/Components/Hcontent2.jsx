@@ -101,7 +101,7 @@ const Hcontent2 = () => {
                         <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
                             <div className="collapse-title text-xl font-medium">PT. Epson Batam</div>
                             <div className="collapse-content">
-                                MERUSAK LUBANG TOBRUT CORPORITE
+                                .
                             </div>
                         </div>
                         <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
