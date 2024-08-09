@@ -92,28 +92,43 @@ const Hcontent2 = () => {
                         Work <span className="text-[#07C65D]">Experience</span>
                     </motion.h1>
                     <div className="text-sm mt-2 md:mt-4 font-poppins text-white font-light text-justify mx-auto md:mx-0 w-full  leading-normal">
-                        <div tabIndex={0} className="collapse collapse-arrow border-base-300 border">
-                            <div className="collapse-title text-xl font-medium">Infinite Learning Indonesia</div>
+                        <div tabIndex={0} className="collapse collapse-arrow border-white border">
+                            <div className="collapse-title text-lg md:text-xl font-medium">Infinite Learning Indonesia</div>
                             <div className="collapse-content">
-                                {content.description3}
+                                <h5 className="-mt-3 pb-2 text-[#07C65D]">Internship Web Developer</h5>
+                                <li>Conducted research based on the needs and target users to create an organized website development.</li>
+                                <li>Developing a company profile website using ReactJS, ExpressJS, Tailwind CSS, DaisyUI to help prospective
+                                    independent mentees and unlimited guests in finding information about the company.</li>
                             </div>
                         </div>
-                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
-                            <div className="collapse-title text-xl font-medium">PT. Epson Batam</div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-white border">
+                            <div className="collapse-title text-lg md:text-xl font-medium">PT. Epson Batam</div>
                             <div className="collapse-content">
-                                .
+                                <h5 className="-mt-3 pb-2 text-[#07C65D]">Internship System Information</h5>
+                                <li>Developing a part supply chain management system using C# and MudBlazor to replace manual vendor data
+                                    management.</li>
+                                <li>Building a PEB recruitment system using C# and MudBlazor to facilitate applicants and HR in managing
+                                    recruitment data.</li>
+                                <li>Improved the Gapuro desktop interface using native C# to simplify operator progress monitoring on work
+                                    progress.</li>
                             </div>
                         </div>
-                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
-                            <div className="collapse-title text-xl font-medium">PT. Techno Pilot Indonesia</div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-white border">
+                            <div className="collapse-title text-lg md:text-xl font-medium">PT. Techno Pilot Indonesia</div>
                             <div className="collapse-content">
-                                {content.description3}
+                                <h5 className="-mt-3 pb-2 text-[#07C65D]">Internship FrontEnd Developer</h5>
+                                <li>Developed a company profile website using Bootstrap 5, Laravel 10 to help buyers find information about the
+                                    company.
+                                </li>
                             </div>
                         </div>
-                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-base-300 border">
-                            <div className="collapse-title text-xl font-medium">PT. Ezb Wisata Indonesia</div>
+                        <div tabIndex={0} className="collapse mt-2 collapse-arrow border-white border">
+                            <div className="collapse-title text-lg md:text-xl font-medium">PT. Ezb Wisata Indonesia</div>
                             <div className="collapse-content">
-                                {content.description3}
+                                <h5 className="-mt-3 pb-2 text-[#07C65D]">FrontEnd Developer</h5>
+                                <li>Receive and Implement Feature Requests from Clients.</li>
+                                <li>Identify and Fix Bugs Provided by the Implementer Team.</li>
+                                <li>Responsible for the Admin Interface of Dolphin and Acetours Applications.</li>
                             </div>
                         </div>
                     </div>
