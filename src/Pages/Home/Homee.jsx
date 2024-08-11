@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "../../Components/Navbar";
 import { useSpring, animated } from '@react-spring/web';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Caraousel from "../../Components/Caraousel";
 import Hcontent2 from "../../Components/Hcontent2";
 import content from '../../Components/Content.json';
@@ -10,6 +10,7 @@ import Hskill from "../../Components/Hskill";
 const Homee = () => {
     const [scrollY, setScrollY] = useState(0);
     const [loading, setLoading] = useState(true);
+    const hcontent2Ref = useRef(null);
 
     const handleScroll = () => {
         setScrollY(window.scrollY);
@@ -35,6 +36,12 @@ const Homee = () => {
         transform: `translateY(${scrollY * -0.1}px)`,
         config: { mass: 1, tension: 280, friction: 100 }
     });
+
+    const handleMoreInfoClick = () => {
+        if (hcontent2Ref.current) {
+            hcontent2Ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <>
@@ -96,6 +103,7 @@ const Homee = () => {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, delay: 0.8 }}
                                         className="py-2 px-5 w-full md:w-[120px] rounded-lg mt-6 font-poppins md:mt-10 bg-[#07C65D]"
+                                        onClick={handleMoreInfoClick} // Attach the click handler
                                     >
                                         More Info
                                     </motion.button>
@@ -105,7 +113,9 @@ const Homee = () => {
                     </animated.div>
 
                     {/* CONTENT 2 */}
-                    <Hcontent2 />
+                    <div ref={hcontent2Ref}>
+                        <Hcontent2 />
+                    </div>
                     {/* CONTENT 3 */}
                     <Caraousel />
                     {/* CONTENT 4 */}
