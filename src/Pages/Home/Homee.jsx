@@ -6,6 +6,7 @@ import Caraousel from "../../Components/Caraousel";
 import Hcontent2 from "../../Components/Hcontent2";
 import content from '../../Components/Content.json';
 import Hskill from "../../Components/Hskill";
+import Hdetail from "../../Components/Hdetail";
 
 const Homee = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -27,11 +28,6 @@ const Homee = () => {
         };
     }, []);
 
-    const parallaxEffect = useSpring({
-        transform: `translateY(${scrollY * -0.5}px)`,
-        config: { mass: 1, tension: 280, friction: 80 }
-    });
-
     const parallaxTextEffect = useSpring({
         transform: `translateY(${scrollY * -0.1}px)`,
         config: { mass: 1, tension: 280, friction: 100 }
@@ -51,15 +47,14 @@ const Homee = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className="text-black text-center text-2xl md:text-4xl font-extrabold font-poppins"
+                        className="text-black text-center font-extrabold font-poppins"
                     >
-                        LOADING BANG, SABAR DULU...
+                        <span className="loading loading-dots bg-[#07C65D] loading-lg"></span>
                     </motion.div>
                 </div>
             ) : (
                 <div className="px-4 md:px-8">
                     <animated.div
-                        style={parallaxEffect}
                         className="w-full bg-[#14151A] h-auto mt-8 pb-5 md:pb-20 rounded-3xl"
                     >
                         <Navbar />
@@ -118,8 +113,16 @@ const Homee = () => {
                     </div>
                     {/* CONTENT 3 */}
                     <Caraousel />
+
+                    {/* Detail My Project */}
+                    <Hdetail />
+
                     {/* CONTENT 4 */}
                     <Hskill />
+
+                    <footer className="font-poppins mt-8">
+                        <p className="text-sm text-[#4D4D4D] pb-2 text-center ">Copyright © 2024 | Celvin Alfino Fernandes</p>
+                    </footer>
                 </div>
             )}
         </>

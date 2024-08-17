@@ -1,28 +1,11 @@
 import { motion } from "framer-motion";
-import { useSpring, animated } from '@react-spring/web';
-import { useState, useEffect } from 'react';
+import { animated } from '@react-spring/web';
 
 const Hskill = () => {
-    const [scrollY, setScrollY] = useState(0);
-
-    const handleScroll = () => {
-        setScrollY(window.scrollY);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const parallax2Effect = useSpring({
-        transform: `translateY(${scrollY * -0.6}px)`,
-        config: { mass: 1, tension: 280, friction: 80 }
-    });
 
     return (
         <>
             <animated.div
-                style={parallax2Effect}
                 className="w-full bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1"
             >
                 <motion.h1

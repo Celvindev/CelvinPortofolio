@@ -1,35 +1,9 @@
 import { motion } from "framer-motion";
 import { useSpring, animated } from '@react-spring/web';
-import { useState, useEffect } from 'react';
 import content from './Content.json';
 
 
 const Hcontent2 = () => {
-    const [scrollY, setScrollY] = useState(0);
-
-    const handleScroll = () => {
-        setScrollY(window.scrollY);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const parallaxEffect = useSpring({
-        transform: `translateY(${scrollY * -0.6}px)`,
-        config: { mass: 1, tension: 280, friction: 80 }
-    });
-
-    const parallax2Effect = useSpring({
-        transform: `translateY(${scrollY * -0.6}px)`,
-        config: { mass: 1, tension: 280, friction: 80 }
-    });
-
-    // const parallaxTextEffect = useSpring({
-    //     transform: `translateY(${scrollY * -0.1}px)`,
-    //     config: { mass: 1, tension: 280, friction: 100 }
-    // });
 
     const parallaxImgEffect = useSpring({
         transform: `translateY(${scrollY * -0.1}px)`,
@@ -39,7 +13,6 @@ const Hcontent2 = () => {
         <>
             <div className="flex flex-col gap-0 md:gap-3 md:flex-row">
                 <animated.div
-                    style={parallaxEffect}
                     className="w-full md:w-[400px] bg-[#14151A] h-auto md:h-[400px] mt-20 md:mt-8 p-5 rounded-3xl"
                 >
                     <animated.div
@@ -63,7 +36,6 @@ const Hcontent2 = () => {
                 </animated.div>
 
                 <animated.div
-                    style={parallax2Effect}
                     className="w-full bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1 "
                 >
                     <motion.h1

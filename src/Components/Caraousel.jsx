@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useSpring, animated } from '@react-spring/web';
+import { animated } from '@react-spring/web';
 import { useState, useEffect, useRef } from 'react';
 
 const tabContents = [
@@ -17,7 +17,6 @@ const tabContents = [
 ];
 
 const Caraousel = () => {
-    const [scrollY, setScrollY] = useState(0);
     const [activeTab, setActiveTab] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
     const carouselRef = useRef(null);
@@ -25,14 +24,7 @@ const Caraousel = () => {
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
-    const handleScroll = () => {
-        setScrollY(window.scrollY);
-    };
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     useEffect(() => {
         const options = {
@@ -57,10 +49,6 @@ const Caraousel = () => {
         return () => observer.disconnect();
     }, [activeTab]);
 
-    const parallaxEffect = useSpring({
-        transform: `translateY(${scrollY * -0.6}px)`,
-        config: { mass: 1, tension: 280, friction: 80 }
-    });
 
     const handleTabClick = (index) => {
         setActiveTab(index);
@@ -93,7 +81,7 @@ const Caraousel = () => {
         <>
             <div className="flex flex-col gap-0 md:gap-3 md:flex-row">
                 <animated.div
-                    style={parallaxEffect}
+
                     className="w-full md:w-[200px] bg-[#14151A] h-auto mt-8 p-5 rounded-3xl block md:hidden"
                 >
                     <motion.h1
@@ -128,7 +116,7 @@ const Caraousel = () => {
                 </animated.div>
 
                 <animated.div
-                    style={parallaxEffect}
+
                     className="w-full bg-[#14151A] h-auto mt-3 md:mt-8 p-2 rounded-3xl flex-1"
                 >
                     <div
@@ -170,7 +158,7 @@ const Caraousel = () => {
                 </animated.div>
 
                 <animated.div
-                    style={parallaxEffect}
+
                     className="w-full md:w-[200px] bg-[#14151A] h-auto mt-8 p-5 rounded-3xl hidden md:block"
                 >
                     <motion.h1
