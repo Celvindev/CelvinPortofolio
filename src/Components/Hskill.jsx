@@ -14,7 +14,7 @@ const Hskill = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-xl md:text-2xl text-center text-white font-poppins font-semibold"
                 >
-                    Work <span className="text-[#07C65D]">Experience</span>
+                    My <span className="text-[#07C65D]">Skills</span>
                 </motion.h1>
                 <div className="flex justify-center mt-8 overflow-x-scroll space-x-8 scrollbar-hide">
                     <img src="./icon/ae.ico" className="w-20 flex-shrink-0" />
