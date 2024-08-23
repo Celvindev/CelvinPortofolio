@@ -117,7 +117,7 @@ const Hdetail = () => {
 
             {/* MODAL */}
             < dialog id="IL" className="modal" >
-                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A]">
+                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A] bg-white">
                     <h3 className="font-semibold text-lg">Web Company Profile Infinite Learning</h3>
                     <p className="py-4 mt-5 text-justify  font-light">
                         During my internship at Infinite Learning, I had the opportunity to build a company profile web project using React.js technology with Tailwind CSS and Daisy UI. The website can be visited at the following link:<br />
@@ -144,7 +144,7 @@ const Hdetail = () => {
             </dialog >
 
             < dialog id="PEB" className="modal" >
-                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A]">
+                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A] bg-white">
                     <h3 className="font-semibold text-lg">Web PEB Recruitment</h3>
                     <p className="py-4 mt-5 text-justify  font-light">
                         PEB Recruitment is a website I developed during my internship at PT Epson Batam, designed to manage the recruitment process, from applicant registration to selection and final result announcements.
@@ -168,7 +168,7 @@ const Hdetail = () => {
             </dialog >
 
             < dialog id="tech" className="modal" >
-                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A]">
+                <div className="modal-box w-11/12 max-w-2xl font-poppins text-[#14151A] bg-white">
                     <h3 className="font-semibold text-lg">Web Company Profile PT. Techno Pilot Indonesia</h3>
                     <p className="py-4 mt-5 text-justify  font-light">
                         Company Profile is a website I developed during my internship at PT. Techno Pilot Indonesia, designed to showcase the company information, services, portfolio, and contact details to potential clients and partners, The website can be visited at the following link:<br />
