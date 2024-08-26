@@ -55,7 +55,7 @@ const Homee = () => {
             ) : (
                 <div className="px-4 md:px-8">
                     <animated.div
-                        className="w-full bg-[#14151A] h-auto mt-8 pb-5 md:pb-20 rounded-3xl"
+                        className="w-full bg-[#14151A] skeleton  h-auto mt-8 pb-5 md:pb-20 rounded-3xl"
                     >
                         <Navbar />
                         <motion.div

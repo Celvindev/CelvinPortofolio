@@ -6,7 +6,7 @@ const Hskill = () => {
     return (
         <>
             <animated.div
-                className="w-full bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1"
+                className="w-full skeleton  bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1"
             >
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ const Hskill = () => {
                     className="text-xl md:text-2xl text-center text-white font-poppins font-semibold"
                 >
                     My
-                     <span className="text-[#07C65D]">Skills</span>
+                    <span className="text-[#07C65D]">Skills</span>
                 </motion.h1>
                 <div className="flex justify-center mt-8 overflow-x-scroll space-x-8 scrollbar-hide">
                     <img src="./icon/ae.ico" className="w-20 flex-shrink-0" />
