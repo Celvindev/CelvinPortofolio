@@ -10,6 +10,7 @@ const tabContents = [
     ],
     [
         "./assets/prima.webp",
+        "./assets/dyo.avif",
     ],
     [
         "./assets/repajak.webp",
