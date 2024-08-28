@@ -13,7 +13,7 @@ const Hcontent2 = () => {
         <>
             <div className="flex flex-col gap-0 md:gap-3 md:flex-row">
                 <animated.div
-                    className="w-full md:w-[400px] bg-[#14151A] skeleton  h-auto md:h-[400px] mt-20 md:mt-8 p-5 rounded-3xl"
+                    className="w-full md:w-[400px] bg-[#14151A] h-auto md:h-[400px] mt-20 md:mt-8 p-5 rounded-3xl"
                 >
                     <animated.div
                         style={parallaxImgEffect}

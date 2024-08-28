@@ -6,7 +6,7 @@ const Hskill = () => {
     return (
         <>
             <animated.div
-                className="w-full skeleton  bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1"
+                className="w-full bg-[#14151A] h-auto mt-3 md:mt-8 p-5 rounded-3xl flex-1"
             >
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
